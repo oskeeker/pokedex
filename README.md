@@ -88,7 +88,7 @@ Query result
 
 ### GraphiQL
 
-GraphiQL is also include to test GraphQL queries, using GraphiQL Spring Boot Starter:
+GraphiQL is also included to test GraphQL queries, using GraphiQL Spring Boot Starter:
 
 ```
  <dependency>
@@ -98,3 +98,8 @@ GraphiQL is also include to test GraphQL queries, using GraphiQL Spring Boot Sta
  </dependency>
  ```
 
+To access web-based version, by default GraphiQL endpoint is configured as /graphiql
+
+```
+ http://localhost:38080/graphiql
+ ```
