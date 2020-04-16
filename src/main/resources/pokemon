@@ -1,0 +1,26 @@
+type Query {
+    fetchPokemonByName(name: String!): Pokemon
+    fetchAllPokemon: [Pokemon]
+}
+
+type Mutation {
+    addPokemon(pokemon: PokemonInput): Pokemon
+}
+
+input PokemonInput {
+    id: ID
+    name: String!
+    pokemonType: PokemonType
+}
+
+type Pokemon {
+    id: ID!
+    name: String!
+    pokemonType: PokemonType
+}
+
+enum PokemonType {
+    fire,
+    water,
+    grass
+}
