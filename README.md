@@ -1,4 +1,4 @@
-Pokedex
+# Pokedex
 
 Springboot annotation based GrapqhQL implementation, Apollo Client for React GrapqhQL implementation.
 
