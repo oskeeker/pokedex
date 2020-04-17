@@ -1,5 +1,6 @@
 package com.carcha.graphql.controller;
 
+import com.carcha.graphql.domain.QueryDTO;
 import com.carcha.graphql.service.PokemonService;
 import graphql.ExecutionInput;
 import graphql.ExecutionResult;
@@ -43,11 +44,20 @@ public class GraphQlController {
     }
 
 
+//    @PostMapping(value = "/graphql", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+//    public Map<String, Object> graphQl(@RequestBody Map<String, String> request, HttpServletRequest raw) {
+//        ExecutionResult executionResult = this.graphQL.execute(ExecutionInput.newExecutionInput()
+//                .query(request.get("query"))
+//                .operationName(request.get("operationName"))
+//                .context(raw)
+//                .build());
+//        return executionResult.toSpecification();
+//    }
     @PostMapping(value = "/graphql", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public Map<String, Object> graphQl(@RequestBody Map<String, String> request, HttpServletRequest raw) {
+    public Map<String, Object> graphQl(@RequestBody QueryDTO queryDTO, HttpServletRequest raw) {
         ExecutionResult executionResult = this.graphQL.execute(ExecutionInput.newExecutionInput()
-                .query(request.get("query"))
-                .operationName(request.get("operationName"))
+                .query(queryDTO.getQuery())
+                .operationName(queryDTO.getOperationName())
                 .context(raw)
                 .build());
         return executionResult.toSpecification();
