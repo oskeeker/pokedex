@@ -1,4 +1,4 @@
-# Pokedex
+Pokedex
 
 Springboot annotation based GrapqhQL implementation, Apollo Client for React GrapqhQL implementation.
 
@@ -7,7 +7,7 @@ Springboot annotation based GrapqhQL implementation, Apollo Client for React Gra
 ### GraphQL Schema
 GraphQL schema is generated using annotations instead of the regular .graphqls schema. For that purpose, some annotations must be added in the domain and in the service layer:
 
-#### Domain layer
+### Domain layer
 Type classes generations is done by the Schema Generation (we will see later), and for that purpose we need to specify in the class entity which fields will be used for the queries. This is done using the @GraphQLQuery annotation:
 
 
@@ -20,7 +20,7 @@ Type classes generations is done by the Schema Generation (we will see later), a
       private PokemonType pokemonType;
 ```
     
-#### Service layer
+### Service layer
 Same as the Type classes, Query and Mutations are generated using the following annotations:
 
   -  @GraphQLQuery for QueryResolver
@@ -70,7 +70,7 @@ Query result
       }
     }
 ```
-#### Schema generation
+### Schema generation
  GraphQL schema generation is done under GraphQlController constructor:
  
  ```
@@ -88,7 +88,7 @@ Query result
       }
  ```
 
-#### GraphiQL
+### GraphiQL
 
 GraphiQL is also included to test GraphQL queries, using GraphiQL Spring Boot Starter:
 
@@ -106,17 +106,14 @@ To access web-based version, by default GraphiQL endpoint is configured as /grap
  http://localhost:38080/graphiql
  ```
 
-##React
-
-##Apollo client
-
+##React Apollo client
 ###### From Docu
 Apollo Client is a complete state management library for JavaScript apps. Simply write a GraphQL query, and Apollo Client will take care of requesting and caching your data, as well as updating your UI.
 ```
 import ApolloClient, { gql } from "apollo-boost";
 ```
 
-##Apollo provider
+##React Apollo provider
 ###### From Docu
 React-Apollo includes a component for providing a client instance to a React component tree, and a higher-order component for retrieving that client instance.
 
