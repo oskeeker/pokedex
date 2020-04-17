@@ -165,3 +165,16 @@ const PokemonQuery = () => {
 };
 
 ```
+
+## Run App
+
+To run the app, just run Springboot server.
+
+On react folder, just run following commands:
+
+```
+npm install (first installation only)
+npm run
+```
+
+Once app is started, app can be ready on http://localhost:3000/ where initial pokemon query is shown.
