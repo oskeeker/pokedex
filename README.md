@@ -133,3 +133,35 @@ const client = new ApolloClient({
 });
 ```
 
+Query example:
+```
+const PokemonQuery = () => {
+  return (
+    <Query
+      query={gql`
+        {
+          fetchAllPokemon {
+            id
+            name
+            pokemonType
+          }
+        }
+      `}
+    >
+      {({ loading, error, data }) => {
+        if (loading) return <p>Loading...</p>;
+        if (error) return <p>Error!</p>;
+
+        return data.fetchAllPokemon.map(Pokemon => {
+          return (
+            <p key={Pokemon.id}>
+              {Pokemon.id}, {Pokemon.name}, Type: {Pokemon.pokemonType}
+            </p>
+          );
+        });
+      }}
+    </Query>
+  );
+};
+
+```
