@@ -10,6 +10,9 @@ import org.springframework.context.annotation.Bean;
 
 import java.util.Random;
 
+/**
+ * Main app
+ */
 @SpringBootApplication
 public class PokedexApplication {
 
@@ -17,6 +20,11 @@ public class PokedexApplication {
         SpringApplication.run(PokedexApplication.class, args);
     }
 
+    /**
+     * Initial Pokemon example
+     * @param pokemonRepository repo
+     * @return CommandLineRunner
+     */
     @Bean
     public CommandLineRunner fillDatabase(PokemonRepository pokemonRepository) {
         return (args) -> {

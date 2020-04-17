@@ -1,6 +1,6 @@
 package com.carcha.graphql.controller;
 
-import com.carcha.graphql.repository.PokemonService;
+import com.carcha.graphql.service.PokemonService;
 import graphql.ExecutionInput;
 import graphql.ExecutionResult;
 import graphql.GraphQL;
@@ -16,11 +16,21 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
+/**
+ * Pokedex controller.
+ *
+ * This controller has the the GraphQL Schema generation in the constructor, and also define the GraphQL endpoint
+ * with the execution of the query.
+ */
 @RestController
 public class GraphQlController {
 
     private final GraphQL graphQL;
 
+    /**
+     * Constructor with the GraphQL schema generation.
+     * @param pokemonService service layer
+     */
     public GraphQlController(PokemonService pokemonService) {
 
         GraphQLSchema schema = new GraphQLSchemaGenerator()
