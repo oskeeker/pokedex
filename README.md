@@ -3,6 +3,7 @@
 Springboot and React GraphQL implementation example.
 
 ##Springboot
+
 ### GraphQL Schema
 GraphQL schema is generated using annotations instead of the regular .graphqls schema. For that purpose, some annotations must be added in the domain and in the service layer:
 
@@ -106,7 +107,9 @@ To access web-based version, by default GraphiQL endpoint is configured as /grap
  ```
 
 ##React
+
 ##Apollo client
+
 ###### From Docu
 Apollo Client is a complete state management library for JavaScript apps. Simply write a GraphQL query, and Apollo Client will take care of requesting and caching your data, as well as updating your UI.
 ```
