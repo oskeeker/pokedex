@@ -1,6 +1,6 @@
 # Pokedex
 
-Springboot and React GraphQL implementation example.
+Springboot annotation based GrapqhQL implementation, Apollo Client for React GrapqhQL implementation.
 
 ##Springboot
 
