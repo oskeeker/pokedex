@@ -35,3 +35,4 @@ node_modules/
 node/
 build/
 dist/
+/react/node_modules/
